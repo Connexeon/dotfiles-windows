@@ -77,5 +77,3 @@ if (Test-PendingReboot) { Invoke-Reboot }
 
 # Taskbar items
 Install-ChocolateyPinnedTaskBarItem "$env:localappdata\Google\Chrome\Application\chrome.exe"
-
-Write-ChocolateySuccess 'Connexeon.Win10.SurvivalKit'
