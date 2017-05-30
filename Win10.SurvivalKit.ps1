@@ -31,6 +31,12 @@ Enable-RemoteDesktop
 Install-WindowsUpdate -acceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
+#region Chocolatey all the way
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco feature enable -n=allowEmptyChecksums
+choco feature enable -n=allowGlobalConfirmation
+#endregion
+
 #region DotNetAndPowershell
 cinst PowerShell
 cinst DotNet4.0
