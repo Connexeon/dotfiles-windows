@@ -1,11 +1,12 @@
+
 # Commandline: START http://boxstarter.org/package/nr/url?http://connexeon.link/Win10.SurvivalKit
 
 # The following settings will ask you for your windows password and then
 # successfuly reboot the machine everytime it needs to. After Boxstarter is
 # done autologin won't be enabled.
-$Boxstarter.RebootOk=$true    # Allow reboots?
+$Boxstarter.RebootOk=$true # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
-$Boxstarter.AutoLogin=$true   # Save my password securely and auto-login after a reboot
+$Boxstarter.AutoLogin=$true # Save my password securely and auto-login after a reboot
 
 # Allow running PowerShell scripts
 Update-ExecutionPolicy Unrestricted
@@ -31,36 +32,36 @@ Install-WindowsUpdate -acceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
 #region DotNetAndPowershell
-cinst -y PowerShell
-cinst -y DotNet4.0
-cinst -y DotNet4.5
+cinst PowerShell
+cinst DotNet4.0
+cinst DotNet4.5
 cinst DotNet4.5.1
-cinst -y mono
+cinst mono
 #endregion
 
 #region Runtimes
-cinst -y flashplayerplugin
-cinst -y javaruntime
-cinst -y java.jdk
-cinst -y nodejs.install
-cinst -y python
-cinst -y scriptcs
+cinst flashplayerplugin
+cinst javaruntime
+cinst java.jdk
+cinst nodejs.install
+cinst python
+cinst scriptcs
 #endregion
 
 #region essentials
-cinst -y vlc
-cinst -y 7zip.install
-cinst -y sysinternals
-cinst -y mpc-hc
-cinst -y ccleaner
-#cinst -y defraggler
-cinst -y treesizefree
+cinst vlc
+cinst 7zip.install
+cinst sysinternals
+cinst mpc-hc
+cinst ccleaner
+#cinst defraggler
+cinst treesizefree
 #endregion
 
 #region Browsers
 cinst GoogleChrome
 cinst speedtest-chrome
-#cinst -y firefox -installArgs l=en-GB
+#cinst firefox -installArgs l=en-GB
 #endregion
 
 # Make sure some windows update didn't creep on us after installing all
