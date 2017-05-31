@@ -21,6 +21,14 @@ powercfg -change -monitor-timeout-ac 0
 powercfg -change -standby-timeout-ac 0
 powercfg -h off
 
+# Windows Configuration
+Install-WindowsUpdate -AcceptEula
+Enable-RemoteDesktop
+Update-ExecutionPolicy Unrestricted
+Disable-InternetExplorerESC
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Set-StartScreenOptions -EnableListDesktopAppsFirst
+
 Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 
 # Install terminal font for RDM
@@ -36,6 +44,7 @@ rm $tempFile -rec
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n=allowEmptyChecksums
 choco feature enable -n=allowGlobalConfirmation
+cinst chocolatey-windowsupdate.extension
 #endregion
 
 #region DotNetAndPowershell
