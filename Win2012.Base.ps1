@@ -40,9 +40,8 @@ choco feature enable -n=allowGlobalConfirmation
 
 #region DotNetAndPowershell
 cinst PowerShell
-cinst DotNet4.0
-cinst DotNet4.5
-cinst DotNet4.5.1
+cinst WindowsAzurePowershell
+cinst DotNet4.7
 #endregion
 
 #region Runtimes
@@ -50,13 +49,15 @@ cinst javaruntime
 cinst java.jdk
 cinst python
 cinst scriptcs
+cinst vcredist-all
 #endregion
 #
 #
-#region essentials
+#region Management & Tools
 cinst 7zip.install
 cinst sysinternals
 cinst treesizefree
+cinst notepadplusplus
 #endregion
 
 #region Browsers
