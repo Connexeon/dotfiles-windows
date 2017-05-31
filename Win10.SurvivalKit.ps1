@@ -1,6 +1,3 @@
-
-# Commandline: START http://boxstarter.org/package/nr/url?http://connexeon.link/Win10.SurvivalKit
-
 # The following settings will ask you for your windows password and then
 # successfuly reboot the machine everytime it needs to. After Boxstarter is
 # done autologin won't be enabled.
@@ -17,8 +14,14 @@ powercfg -change -monitor-timeout-ac 0
 powercfg -change -standby-timeout-ac 0
 powercfg -h off
 
-Set-TaskbarOptions -Size Small -Lock # -Dock Top
+Set-TaskbarOptions -Size Small -Lock
+ # -Dock Top
 Set-WindowsExplorerOptions -EnableShowFileExtensions -EnableShowFullPathInTitleBar # -DisableShowRecentFilesInQuickAccess -DisableShowFrequentFoldersInQuickAccess
+Disable-InternetExplorerESC
+
+Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
+Set-StartScreenOptions -EnableListDesktopAppsFirst
+
 Set-StartScreenOptions -EnableBootToDesktop -EnableDesktopBackgroundOnStart -EnableShowStartOnActiveScreen -EnableShowAppsViewOnStartScreen -EnableSearchEverywhereInAppsView -EnableListDesktopAppsFirst
 
 # Disables the Bing Internet Search when searching from the search field in the Taskbar or Start Menu.
@@ -39,10 +42,7 @@ choco feature enable -n=allowGlobalConfirmation
 
 #region DotNetAndPowershell
 cinst PowerShell
-cinst DotNet4.0
-cinst DotNet4.5
-cinst DotNet4.5.1
-cinst mono
+cinst DotNet4.7
 #endregion
 
 #region Runtimes
@@ -51,7 +51,10 @@ cinst javaruntime
 cinst java.jdk
 cinst nodejs.install
 cinst python
+cinst nuget.commandline
 cinst scriptcs
+cinst vcredist-all
+
 #endregion
 
 #region essentials
@@ -62,6 +65,7 @@ cinst mpc-hc
 cinst ccleaner
 #cinst defraggler
 cinst treesizefree
+cinst adobereader
 #endregion
 
 #region Browsers
