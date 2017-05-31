@@ -51,3 +51,15 @@ cinst java.jdk
 cinst python
 cinst scriptcs
 #endregion
+#
+#
+#region essentials
+cinst 7zip.install
+cinst sysinternals
+cinst treesizefree
+#endregion
+
+#region Browsers
+cinst GoogleChrome
+#cinst firefox -installArgs l=en-GB
+#endregion
