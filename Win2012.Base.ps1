@@ -58,6 +58,7 @@ cinst 7zip.install
 cinst sysinternals
 cinst treesizefree
 cinst notepadplusplus
+cinst processhacker
 #endregion
 
 #region Browsers
