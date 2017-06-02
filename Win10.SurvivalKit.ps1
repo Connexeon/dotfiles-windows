@@ -51,10 +51,8 @@ cinst javaruntime
 cinst java.jdk
 cinst nodejs.install
 cinst python
-cinst nuget.commandline
 cinst scriptcs
 cinst vcredist-all
-
 #endregion
 
 #region essentials
@@ -66,6 +64,7 @@ cinst ccleaner
 #cinst defraggler
 cinst treesizefree
 cinst adobereader
+cinst greenshot
 #endregion
 
 #region Browsers
