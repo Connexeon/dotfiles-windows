@@ -47,8 +47,8 @@ cinst DotNet4.7
 
 #region Runtimes
 cinst flashplayerplugin
-cinst javaruntime
-cinst java.jdk
+cinst jdk8
+cinst jre8
 cinst nodejs.install
 cinst python
 cinst scriptcs
