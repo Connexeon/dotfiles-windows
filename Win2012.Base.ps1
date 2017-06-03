@@ -1,7 +1,7 @@
 # The following settings will ask you for your windows password and then
 # successfuly reboot the machine everytime it needs to. After Boxstarter is
 # done autologin won't be enabled.
-$Boxstarter.RebootOk=$true # Allow reboots?
+$Boxstarter.RebootOk=$false # Allow reboots?
 $Boxstarter.NoPassword=$false # Is this a machine with no login password?
 $Boxstarter.AutoLogin=$false # Save my password securely and auto-login after a reboot
 
@@ -54,20 +54,20 @@ cinst DotNet4.7
 #endregion
 
 #region Runtimes
-cinst javaruntime
-cinst java.jdk
+cinst jre8
+cinst jdk8
 cinst python
 cinst scriptcs
 cinst vcredist-all
 #endregion
-#
-#
+
 #region Management & Tools
 cinst 7zip.install
 cinst sysinternals
 cinst treesizefree
 cinst notepadplusplus
 cinst processhacker
+cinst wincommandpaste
 #endregion
 
 #region Browsers
