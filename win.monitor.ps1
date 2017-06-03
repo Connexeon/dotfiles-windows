@@ -1,0 +1,1 @@
+cinst icinga2

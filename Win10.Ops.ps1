@@ -1,5 +1,3 @@
-https://github.com/afzaalace/synergy-stable-builds/releases/download/v1.8.8-stable/synergy-v1.8.8-stable-Windows-x64.msi
-
 # Install terminal font for RDM
 $FONTS = 0x14
 $objShell = New-Object -ComObject Shell.Application
@@ -9,6 +7,7 @@ $tempFile = $env:TEMP + "\DejaVu Sans Mono for Powerline.ttf"
 $objFolder.CopyHere($tempFile);
 rm $tempFile -rec
 
+
 # Create AppModelUnlock if it doesn't exist, required for enabling Developer Mode
 $RegistryKeyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
 if (-not(Test-Path -Path $RegistryKeyPath)) {
@@ -17,6 +16,9 @@ if (-not(Test-Path -Path $RegistryKeyPath)) {
 
 # Add registry value to enable Developer Mode
 New-ItemProperty -Path $RegistryKeyPath -Name AllowDevelopmentWithoutDevLicense -PropertyType DWORD -Value 1
+
+#
+#  lxrun /install /y
 
 
 'https://cdn.devolutions.net/download/Setup.RemoteDesktopManager.12.0.5.0.msi'
@@ -36,8 +38,8 @@ cinst putty
 cinst axel
 cinst windowsazurepowershell
 cinst virtualbox
-cinst Microsoft-Hyper-V-All -source windowsfeatures
 cinst cygwin
+choco install synergy --version 1.8.8 --source https://www.myget.org/F/connexeon/
 
 cinst NuGet.CommandLine
 cinst curl
