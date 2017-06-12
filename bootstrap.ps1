@@ -11,3 +11,5 @@ Enable-PSRemoting -Force
 
 # Passing packages to install from commandline
 Install-BoxstarterPackage -PackageName $PackageName -DisableReboots
+
+iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/mwrock/boxstarter/master/BuildScripts/bootstrapper.ps1'))
