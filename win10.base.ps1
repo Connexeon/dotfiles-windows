@@ -1,11 +1,3 @@
-# Windows Features
-cinst Microsoft-Windows-Subsystem-Linux --source windowsfeatures
-cinst TelnetClient -source windowsFeatures
-#cinst IIS-WebServerRole -source windowsfeatures
-#cinst IIS-HttpCompressionDynamic -source windowsfeatures
-#cinst IIS-ManagementScriptingTools -source windowsfeatures
-#cinst IIS-WindowsAuthentication -source windowsfeatures
-
 # Runtimes / Platforms
 cinst jre8
 cinst python
@@ -13,7 +5,6 @@ cinst php
 cinst composer
 
 # Connexeon Tools
-cinst rdm
 cinst pvm
 cinst slack
 cinst telegram
@@ -38,11 +29,10 @@ cinst github-desktop
 cinst atom
 cinst diffmerge
 
+# Configure PPTP VPN
 iex ((New-Object System.Net.WebClient).DownloadString('http://connexeon.link/install-vpn'))
 
 # Essentials
-cinst keepass
-cinst keepass-plugin-keepasshttp
 cinst dashlane
 cinst 1clipboard
 cinst checksum
