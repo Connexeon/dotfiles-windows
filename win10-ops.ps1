@@ -17,15 +17,17 @@ if (-not(Test-Path -Path $RegistryKeyPath)) {
 # Add registry value to enable Developer Mode
 New-ItemProperty -Path $RegistryKeyPath -Name AllowDevelopmentWithoutDevLicense -PropertyType DWORD -Value 1
 
-#
-#  lxrun /install /y
+# Ubuntu Windows
+lxrun /install /y
 
+# NuGet 
+Install-PackageProvider -Name "nuget" -Force
+cinst NuGet.CommandLine
 
-'https://cdn.devolutions.net/download/Setup.RemoteDesktopManager.12.0.5.0.msi'
+# RDM
+Start-Process msiexec.exe -Wait -ArgumentList '/I https://connexeon.link/download-rdm-beta-msi /quiet'
 
-'https://cdn.devolutions.net/download/Setup.RemoteDesktopManager.12.0.5.0.msi'
-
-
+# More Ops software & tools 
 cinst Microsoft-Hyper-V-All -source windowsfeatures
 cinst HeidiSQL
 cinst sql-server-management-studio
@@ -41,7 +43,6 @@ cinst virtualbox
 cinst cygwin
 choco install synergy --version 1.8.8 --source https://www.myget.org/F/connexeon/
 
-cinst NuGet.CommandLine
 cinst curl
 cinst sourcetree
 cinst vagrant
