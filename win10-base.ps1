@@ -1,8 +1,12 @@
+# Boxstarter 
+cinst boxstarter
+
+# Web Browsers
+cinst googlechrome
+
 # Runtimes / Platforms
 cinst jre8
 cinst python
-cinst php
-cinst composer
 
 # Connexeon Tools
 cinst pvm
@@ -20,14 +24,8 @@ Start-Process msiexec.exe -Wait -ArgumentList '/I http://downloads.3cx.com/downl
 # Splashtop Streamer configured with deploy code
 Start-Process msiexec.exe -Wait -ArgumentList '/norestart /qn /i https://d17kmd0va0f0mp.cloudfront.net/csrs/Splashtop_Streamer_Windows_deploy_v3.1.4.1.msi USERINFO="dcode=4R2WY2KJ5Z5A,hidewindow=1"'
 
-# ZeroTier One
-Start-Process msiexec.exe -Wait -ArgumentList '/I https://download.zerotier.com/dist/ZeroTier%20One.msi /quiet'
-
-# Dev / Doc Tools
-cinst git
-cinst github-desktop
-cinst atom
-cinst diffmerge
+# Zerotier
+Install-BoxstarterPackage 'http://connexeon.link/install-zerotier'
 
 # Configure PPTP VPN
 iex ((New-Object System.Net.WebClient).DownloadString('http://connexeon.link/install-vpn'))
@@ -39,7 +37,6 @@ cinst checksum
 cinst 7zip
 cinst 7zip.commandline
 cinst filezilla
-cinst boxstarter
 cinst wget
 cinst wput
 cinst wincommandpaste
@@ -54,17 +51,4 @@ cinst youtube-dl
 cinst flashplayerplugin
 cinst adobeair
 
-# Web Browsers
-cinst googlechrome
 
-# Customization
-Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
-
-# Atom Plugins
-apm install sync-settings
-
-# Connexeon Tools Configuration
-## Configure RDM datasource
-Import-Module "${env:ProgramFiles(x86)}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.PowerShellModule.dll"
-$s = New-RDMDataSource -SQLServer -Database ConnexeonRDM -IntegratedSecurity -Server rdm.connexeon.local -Name Connexeon -SetDatasource
-Set-RDMDatasource $s
