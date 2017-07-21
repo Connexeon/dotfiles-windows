@@ -73,4 +73,4 @@ Install-WindowsUpdate -acceptEula
 if (Test-PendingReboot) { Invoke-Reboot }
 
 # Taskbar items
-Install-ChocolateyPinnedTaskBarItem "$env:localappdata\Google\Chrome\Application\chrome.exe"
+Install-ChocolateyPinnedTaskBarItem "$($Boxstarter.programFiles86)\Google\Chrome\Application\chrome.exe"
