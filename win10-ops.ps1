@@ -1,12 +1,5 @@
-# Install terminal font for RDM
-$FONTS = 0x14
-$objShell = New-Object -ComObject Shell.Application
-$objFolder = $objShell.Namespace($FONTS)
-$tempFile = $env:TEMP + "\DejaVu Sans Mono for Powerline.ttf"
-(new-object System.Net.WebClient).DownloadFile('http://connexeon.link/download-rdm-font', $tempFile);
-$objFolder.CopyHere($tempFile);
-rm $tempFile -rec
-
+# Remote Desktop Manager
+Install-BoxstarterPackage 'http://connexeon.link/install-rdm'
 
 # Create AppModelUnlock if it doesn't exist, required for enabling Developer Mode
 $RegistryKeyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
@@ -23,9 +16,6 @@ lxrun /install /y
 # NuGet 
 Install-PackageProvider -Name "nuget" -Force
 cinst NuGet.CommandLine
-
-# RDM
-Start-Process msiexec.exe -Wait -ArgumentList '/I https://connexeon.link/download-rdm-beta-msi /quiet'
 
 # More Ops software & tools 
 cinst Microsoft-Hyper-V-All -source windowsfeatures
