@@ -10,8 +10,8 @@ Examples:
 `START http://boxstarter.org/package/url?https://connexeon.link/install-win10-base`
 
 ### Windows 2012 Server Connexeon base 
-`START http://boxstarter.org/package/url?http://connexeon.link/install-win2012-base`
+`START http://boxstarter.org/package/url?https://connexeon.link/install-win2012-base`
 
 ### Zerotier One Windows & join Connexeon network 
-`START http://boxstarter.org/package/url?http://connexeon.link/install-zerotier`
+`START http://boxstarter.org/package/url?https://connexeon.link/install-zerotier`
 
