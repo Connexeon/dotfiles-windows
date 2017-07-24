@@ -12,6 +12,6 @@ Examples:
 ### Windows 2012 Server Connexeon base 
 `START http://boxstarter.org/package/nr/url?https://connexeon.link/install-win2012-base`
 
-### Zerotier One Windows & join Connexeon network 
+### Install Zerotier One & join Connexeon network 
 `START http://boxstarter.org/package/nr/url?https://connexeon.link/install-zerotier`
 
