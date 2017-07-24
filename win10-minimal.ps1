@@ -41,10 +41,7 @@ cinst DotNet4.7
 
 #region Runtimes
 cinst flashplayerplugin
-cinst jdk8
 cinst jre8
-cinst nodejs.install
-cinst python
 cinst scriptcs
 cinst vcredist-all
 #endregion
@@ -53,12 +50,9 @@ cinst vcredist-all
 cinst vlc
 cinst 7zip.install
 cinst sysinternals
-cinst mpc-hc
 cinst ccleaner
-#cinst defraggler
 cinst treesizefree
 cinst adobereader
-cinst greenshot
 #endregion
 
 #region Browsers
