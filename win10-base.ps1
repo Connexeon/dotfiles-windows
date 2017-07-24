@@ -40,9 +40,7 @@ cinst filezilla
 cinst wget
 cinst wput
 cinst wincommandpaste
-
-# DBA
-cinst HeidiSQL
+cinst greenshot
 
 # Multimedia
 cinst spotify --ignore-checksums
