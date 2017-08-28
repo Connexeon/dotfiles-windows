@@ -71,6 +71,7 @@ cinst putty
 cinst axel
 cinst ccleaner
 cinst ccenhancer
+cinst rambox
 #endregion
 
 #region Webbrowsers
