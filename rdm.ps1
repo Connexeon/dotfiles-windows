@@ -6,7 +6,7 @@ $FONTS = 0x14
 $objShell = New-Object -ComObject Shell.Application
 $objFolder = $objShell.Namespace($FONTS)
 $tempFile = $env:TEMP + "\DejaVu Sans Mono for Powerline.ttf"
-(new-object System.Net.WebClient).DownloadFile('http://connexeon.link/download-rdm-font', $tempFile);
+(new-object System.Net.WebClient).DownloadFile('https://connexeon.link/download-rdm-font', $tempFile);
 $objFolder.CopyHere($tempFile);
 rm $tempFile -rec
 
