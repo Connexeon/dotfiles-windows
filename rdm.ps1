@@ -11,7 +11,7 @@ $objFolder.CopyHere($tempFile);
 rm $tempFile -rec
 
 # Pin to taskbar
-Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Devolutions\Remote Desktop Manager\RemoteDesktopManager64.exe"
+Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.exe"
 
 # Configure Connexeon RDM datasource
 Import-Module "${env:ProgramFiles(x86)}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.PowerShellModule.dll"
