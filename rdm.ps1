@@ -13,8 +13,3 @@ rm $tempFile -rec
 # Pin to taskbar
 Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.exe"
 
-# Configure Connexeon RDM datasource
-Import-Module "${env:ProgramFiles(x86)}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.PowerShellModule.dll"
-$s = New-RDMDataSource -SQLServer -Database ConnexeonRDM -IntegratedSecurity -Server rdm.connexeon.local -Name Connexeon -SetDatasource
-Set-RDMDatasource $s
-
