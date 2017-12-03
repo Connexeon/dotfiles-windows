@@ -3,6 +3,7 @@ Start-Process msiexec.exe -Wait -ArgumentList '/I https://connexeon.link/downloa
 
 # Install terminal fonts
 choco install inconsolata -y
+choco install SourceCodePro -y
 
 # Pin to taskbar
 Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.exe"
