@@ -24,6 +24,7 @@ foreach ($fontFile in $fontFiles) {
         
         $fonts.CopyHere($fontFile.FullName, 16)
     }
+} 
 
 # Pin to taskbar
 Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.exe"
