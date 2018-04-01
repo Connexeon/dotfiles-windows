@@ -3,9 +3,15 @@ Start-Process msiexec.exe -Wait -ArgumentList '/I https://connexeon.link/downloa
 
 # Install terminal fonts
 choco install git -y
-cd $HOME\Downloads
-git clone https://github.com/powerline/fonts.git powerline-fonts
-cd $HOME\Downloads\powerline-fonts
+
+if ( Test-Path '$HOME\Downloads\powerline-fonts' -PathType Container ) { 
+  cd $HOME\Downloads\powerline-fonts
+  git pull
+} else {
+  cd $HOME\Downloads
+  git clone https://github.com/powerline/fonts.git powerline-fonts
+  cd $HOME\Downloads\powerline-fonts
+}
 
 $FontName = '*'
 $fontFiles = New-Object 'System.Collections.Generic.List[System.IO.FileInfo]'
