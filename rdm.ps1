@@ -1,5 +1,11 @@
+set-ExecutionPolicy Unrestricted -force
+
 # RDM
 Start-Process msiexec.exe -Wait -ArgumentList '/I https://connexeon.link/download-rdm-beta-msi /quiet'
+
+# Splashtop Streamer
+wmic product where name='Splashtop Streamer' call uninstall
+Start-Process msiexec.exe -Wait -ArgumentList '/norestart /qn /I https://connexeon.link/download-splashtop-streamer-msi USERINFO="dcode=4R2WY2KJ5Z5A,hidewindow=1"'
 
 # Install terminal fonts
 choco install git -y
