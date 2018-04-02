@@ -33,5 +33,6 @@ foreach ($fontFile in $fontFiles) {
 } 
 
 # Pin to taskbar
-Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles}\Devolutions\Remote Desktop Manager\RemoteDesktopManager.exe"
+$dir = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
+Install-ChocolateyPinnedTaskBarItem "$dir\Devolutions\Remote Desktop Manager\RemoteDesktopManager.exe"
 
