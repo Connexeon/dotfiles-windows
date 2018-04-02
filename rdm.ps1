@@ -1,5 +1,3 @@
-set-ExecutionPolicy Unrestricted -force
-
 # RDM
 Start-Process msiexec.exe -Wait -ArgumentList '/I https://connexeon.link/download-rdm-beta-msi /quiet'
 
