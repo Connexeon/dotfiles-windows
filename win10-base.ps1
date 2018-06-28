@@ -20,7 +20,6 @@ cinst nextcloud-client
 cinst toggl
 cinst mkdocs
 cinst mkdocs-material
-cinst skype
 
 # 3CX phone
 Start-Process msiexec.exe -Wait -ArgumentList '/I http://downloads.3cx.com/downloads/3CXPhoneforWindows15.msi /quiet'
@@ -35,8 +34,9 @@ Install-BoxstarterPackage 'http://connexeon.link/install-zerotier'
 iex ((New-Object System.Net.WebClient).DownloadString('http://connexeon.link/install-vpn'))
 
 # Essentials
+cinst adobereader
+cinst office365proplus
 cinst dashlane
-cinst 1clipboard
 cinst checksum
 cinst 7zip
 cinst 7zip.commandline
