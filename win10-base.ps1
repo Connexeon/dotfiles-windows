@@ -13,7 +13,6 @@ cinst jre8
 cinst python
 
 # Connexeon Tools
-cinst pvm
 cinst slack
 cinst telegram
 cinst nextcloud-client
@@ -25,7 +24,7 @@ cinst mkdocs-material
 Start-Process msiexec.exe -Wait -ArgumentList '/I http://downloads.3cx.com/downloads/3CXPhoneforWindows15.msi /quiet'
 
 # Splashtop Streamer configured with deploy code
-Start-Process msiexec.exe -Wait -ArgumentList '/norestart /qn /i https://d17kmd0va0f0mp.cloudfront.net/csrs/Splashtop_Streamer_Windows_deploy_v3.1.4.1.msi USERINFO="dcode=4R2WY2KJ5Z5A,hidewindow=1"'
+Start-Process msiexec.exe -Wait -ArgumentList '/norestart /qn /i https://d17kmd0va0f0mp.cloudfront.net/csrs/Splashtop_Streamer_Win_DEPLOY_INSTALLER_v3.3.0.0.msi USERINFO="dcode=4R2WY2KJ5Z5A,hidewindow=1"'
 
 # Zerotier
 Install-BoxstarterPackage 'http://connexeon.link/install-zerotier'
@@ -44,12 +43,9 @@ cinst filezilla
 cinst wget
 cinst wput
 cinst wincommandpaste
-cinst greenshot
 
 # Multimedia
 cinst spotify --ignore-checksums
-cinst toastify
-cinst youtube-dl
 cinst flashplayerplugin
 cinst adobeair
 
