@@ -34,18 +34,17 @@ cinst wireshark
 cinst treesizefree
 cinst winscp
 cinst putty
-cinst axel
+#cinst axel
 cinst windowsazurepowershell
 cinst virtualbox
-cinst cygwin
-choco install synergy --version 1.8.8 --source https://www.myget.org/F/connexeon/
+#cinst cygwin
 
 cinst curl
 cinst sourcetree
-cinst vagrant
-cinst packer
-cinst cmder
-cinst boot2docker
+#cinst vagrant
+#cinst packer
+#cinst cmder
+#cinst boot2docker
 
 #region BoxStarter baby
 cinst boxstarter
@@ -60,8 +59,8 @@ cinst Boxstarter.WindowsUpdate
 #endregion
 
 #region Ops tools
-cinst teamviewer --version 11.0.66695 --ignore-checksums
-choco pin add -n=teamviewer --version 11.0.66695
+# cinst teamviewer --version 11.0.66695 --ignore-checksums
+# choco pin add -n=teamviewer --version 11.0.66695
 cinst rsat
 cinst nmap
 cinst wireshark
