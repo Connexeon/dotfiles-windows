@@ -17,11 +17,11 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtec
 
 # Set-TaskbarOptions -Size Large -Dock Bottom -Combine Always -AlwaysShowIconsOn -Lock
 
-# Update-ExecutionPolicy Unrestricted -Force
+Update-ExecutionPolicy Unrestricted -Force
 
-# Enable-RemoteDesktop
+Enable-RemoteDesktop
 
-# Disable-InternetExplorerESC
+Disable-InternetExplorerESC
 
 # Create AppModelUnlock if it doesn't exist, required for enabling Developer Mode
 #$RegistryKeyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
