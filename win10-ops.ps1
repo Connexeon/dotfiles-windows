@@ -15,7 +15,7 @@ Disable-GameBarTips
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
 
-Set-TaskbarOptions -Size Large -Dock Bottom -Combine Always -AlwaysShowIconsOn -Lock
+# Set-TaskbarOptions -Size Large -Dock Bottom -Combine Always -AlwaysShowIconsOn -Lock
 
 # Update-ExecutionPolicy Unrestricted -Force
 
