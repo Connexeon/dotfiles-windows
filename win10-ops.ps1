@@ -40,7 +40,7 @@ cinst virtualbox
 #cinst cygwin
 
 cinst curl
-cinst sourcetree
+#cinst sourcetree
 #cinst vagrant
 #cinst packer
 #cinst cmder
