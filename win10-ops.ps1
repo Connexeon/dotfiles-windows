@@ -17,20 +17,20 @@ Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtec
 
 Set-TaskbarOptions -Size Large -Dock Bottom -Combine Always -AlwaysShowIconsOn -Lock
 
-Update-ExecutionPolicy Unrestricted -Force
+# Update-ExecutionPolicy Unrestricted -Force
 
-Enable-RemoteDesktop
+# Enable-RemoteDesktop
 
-Disable-InternetExplorerESC
+# Disable-InternetExplorerESC
 
 # Create AppModelUnlock if it doesn't exist, required for enabling Developer Mode
-$RegistryKeyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
-if (-not(Test-Path -Path $RegistryKeyPath)) {
-    New-Item -Path $RegistryKeyPath -ItemType Directory -Force
-}
+#$RegistryKeyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
+#if (-not(Test-Path -Path $RegistryKeyPath)) {
+#    New-Item -Path $RegistryKeyPath -ItemType Directory -Force
+#}
 
 # Add registry value to enable Developer Mode
-New-ItemProperty -Path $RegistryKeyPath -Name AllowDevelopmentWithoutDevLicense -PropertyType DWORD -Value 1
+#New-ItemProperty -Path $RegistryKeyPath -Name AllowDevelopmentWithoutDevLicense -PropertyType DWORD -Value 1
 
 # Remote Desktop Manager
 Write-Host "Remote Desktop Manager"
