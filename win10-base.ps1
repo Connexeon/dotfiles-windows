@@ -13,6 +13,7 @@ cinst jre8
 cinst python
 
 # Connexeon Tools
+cinst station
 cinst slack
 cinst telegram
 cinst nextcloud-client
