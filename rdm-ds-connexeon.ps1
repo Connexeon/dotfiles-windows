@@ -12,5 +12,5 @@ foreach ($datasource in $datasources)
 }
 
 # Add new datasource
-$s = New-RDMDataSource -SQLServer -Database ConnexeonRDM -IntegratedSecurity -Server 10.244.0.15 -Name Connexeon -SetDatasource
+$s = New-RDMDataSource -SQLServer -Database ConnexeonRDM -IntegratedSecurity -Server 10.0.30.15 -Name Connexeon -SetDatasource
 Set-RDMDatasource $s
